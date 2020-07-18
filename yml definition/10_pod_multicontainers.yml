@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: busybox
+  name: busybox
+spec:
+  containers:
+  - name: busybox-ls
+    image: busybox
+    command: ["bin/sh", "-c", "ls"]
+  - name: busybox-echo-1
+    image: busybox
+    command: ["bin/sh", "-c", "echo Hello from echo 1"]
+  - name: busybox-echo-2
+    image: busybox
+    command: ["bin/sh", "-c", "echo Hello from echo 2"]
+    
+    
